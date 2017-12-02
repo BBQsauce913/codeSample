@@ -23,6 +23,5 @@ intlArray.sort(function(a, b) {
     return a.expenseRatio - b.expenseRatio;
 });
 
-console.log(intlArray.sort());
 
 module.exports = intlArray;

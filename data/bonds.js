@@ -23,6 +23,5 @@ bondArray.sort(function(a, b) {
     return a.expenseRatio - b.expenseRatio;
 });
 
-console.log(bondArray.sort());
 
 module.exports = bondArray;

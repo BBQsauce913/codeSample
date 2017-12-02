@@ -11,6 +11,4 @@ realEstateArray.sort(function(a, b) {
     return a.expenseRatio - b.expenseRatio;
 });
 
-console.log(realEstateArray.sort());
-
 module.exports = realEstateArray;

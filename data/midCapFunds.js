@@ -11,6 +11,4 @@ midCapArray.sort(function(a, b) {
     return a.expenseRatio - b.expenseRatio;
 });
 
-console.log(midCapArray.sort());
-
 module.exports = midCapArray;

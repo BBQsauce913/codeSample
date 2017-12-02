@@ -17,6 +17,4 @@ smCapArray.sort(function(a, b) {
     return a.expenseRatio - b.expenseRatio;
 });
 
-console.log(smCapArray.sort());
-
 module.exports = smCapArray;
