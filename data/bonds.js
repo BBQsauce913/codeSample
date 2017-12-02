@@ -24,3 +24,5 @@ bondArray.sort(function(a, b) {
 });
 
 console.log(bondArray.sort());
+
+module.exports = bondArray;

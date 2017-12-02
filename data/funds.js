@@ -91,4 +91,4 @@ const fundArray = [
     },
 ];
 
-module.exports = fundArray
+module.exports = fundArray;

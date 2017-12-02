@@ -18,3 +18,5 @@ smCapArray.sort(function(a, b) {
 });
 
 console.log(smCapArray.sort());
+
+module.exports = smCapArray;

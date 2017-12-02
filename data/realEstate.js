@@ -12,3 +12,5 @@ realEstateArray.sort(function(a, b) {
 });
 
 console.log(realEstateArray.sort());
+
+module.exports = realEstateArray;

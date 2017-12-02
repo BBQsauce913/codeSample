@@ -12,3 +12,5 @@ moneyMarketArray.sort(function(a, b) {
 });
 
 console.log(moneyMarketArray.sort());
+
+module.exports = moneyMarketArray;

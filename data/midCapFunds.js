@@ -12,3 +12,5 @@ midCapArray.sort(function(a, b) {
 });
 
 console.log(midCapArray.sort());
+
+module.exports = midCapArray;

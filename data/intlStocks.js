@@ -24,3 +24,5 @@ intlArray.sort(function(a, b) {
 });
 
 console.log(intlArray.sort());
+
+module.exports = intlArray;
