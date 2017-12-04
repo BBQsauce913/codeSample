@@ -9,13 +9,13 @@ function start(){
         {
             type: "input",
             name: "retirement",
-            message: "Hello user, how much do you have to retire? $",
+            message: "Hello user, how much do you have to retire ? $",
     
         },
         {
             type: "input",
             name: "lgCap",
-            prefix: "Enter your targeted percentage amounts for each investment option: ",
+            prefix: "Enter your targeted percentage amounts for each investment option (enter percents as decimals): ",
             message:"Large Cap Stocks?",
         },
         {
