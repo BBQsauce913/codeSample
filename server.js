@@ -13,11 +13,12 @@ app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
 require("./routes/apiRoutes")(app);
 require("./routes/htmlRoutes")(app);
+// require("./public/js/app")(app);
 
 var inquirer = require("inquirer");
 
 console.log("-----------------------------------------");
-console.log("Investment Helper");
+console.log("FastFundFinder");
 console.log("-----------------------------------------");
 
 function start(){
@@ -104,20 +105,6 @@ function start(){
                 commodities = user.commodities;
                 targetDate = user.targetDate;
 
-                // if (
-                //     lgCap +
-                //     midCap +
-                //     smCap +
-                //     intl +
-                //     realEstate +
-                //     bonds +
-                //     moneyMarket +
-                //     commodities +
-                //     targetDate !== 1) {
-                //         console.log("Does not add up.");
-                //         start();
-                // }
-
                 console.log("-----------------------------------------");
                 console.log("Here is your targeted investment amounts based off our 'fund expense ratio'")
                 console.log("-----------------------------------------");
@@ -156,14 +143,6 @@ function start(){
                     var moneyMarketInvest = retirement * moneyMarket;
                     console.log("Targeted Money Market Investments: $" + moneyMarketInvest);
                 }
-
-                function commoditieSort() {
-                    var commoditieInvest = retirement * commodities;
-                }
-
-                function targetDateSort() {
-                    var targetDateInvest = retirement * targetDate;
-                }
             
             lgCapSort();
             midCapSort();
@@ -175,22 +154,6 @@ function start(){
             commoditieSort();
             targetDateSort();
         
-            // if (lgCapInvest + 
-            //     midCapInvest + 
-            //     smCapInvest + 
-            //     intlInvest + 
-            //     realEstateInvest + 
-            //     bondInvest + 
-            //     moneyMarketInvest + 
-            //     commoditieInvest + 
-            //     targetDateInvest === user.retirement) {
-            //         fundSort();
-            //     } 
-            //     else {
-            //         console.log("Your targeted percentages do not add up!");
-            //         start();
-            //     }
-            
         }
         fundSort();
     })

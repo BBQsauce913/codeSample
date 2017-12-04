@@ -15,19 +15,19 @@ const lgCapArray = [
 
 module.exports = lgCapArray;
 
-// var ratios = [];
+var ratios = [];
 
-// function getRatios(arrExpenseRatio) {
-//     var arrExpenseRatio = [];
-//       //iterate through lgCapArray expenseRatio's;
-//       lgCapArray.forEach(function(item) {
-//         //get the expense ratio
-//         var val = [item.fund, item.expenseRatio];
-//         //push 
-//         arrExpenseRatio.push(val);
-//       });
-//     ratios.push(arrExpenseRatio);
-//     console.log(arrExpenseRatio);
-// }
+function getRatios(arrExpenseRatio) {
+    var arrExpenseRatio = [];
+      //iterate through lgCapArray expenseRatio's;
+      lgCapArray.forEach(function(item) {
+        //get the expense ratio
+        var val = [item.fund, item.expenseRatio];
+        //push 
+        arrExpenseRatio.push(val);
+      });
+    ratios.push(arrExpenseRatio);
+    console.log(arrExpenseRatio);
+}
 
-// getRatios();
+getRatios();

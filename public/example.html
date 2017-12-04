@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>funds Page</title>
+
+  <!-- Latest compiled and minified CSS & JS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+  <div class="container">
+
+    <div class="jumbotron">
+      <h1 class="text-center"><span class="glyphicon glyphicon-fire"></span>FastFundFinder</h1>
+      <hr>
+      <h2 class="text-center"></h2>
+      <br>
+
+      <div class="text-center">
+        <a href="/example"><button type="button" class="btn btn-lg btn-danger" style="background-color: #6EC111; border-color:#6EC111;"><span class="glyphicon glyphicon-credit-card"></span> Fund Find Example</button></a>
+        <a href="/"><button type="button" class="btn btn-lg btn-default"><span class="glyphicon glyphicon-home"></span></button></a>
+        <a href="/funds"><button type="button" class="btn btn-lg btn-default"><b>$$$</b><span class="glyphicon glyphicon-"></span></button></a>
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">Current Funds</h4>
+            </div>
+        <div class="panel-body" id="fundSelection">
+            <p> A User who is 15 years from retirement signs up.
+                <br> 
+                The User has a $50,000 retirement account that is incorrectly allocated. Examples below.
+            </p>
+            <p>
+                    Sample Current Portfolio 1 --
+                    Category --
+                    Allocation --
+                    Target Date
+                    100%
+            </p>
+            <p>
+                    Sample Current Portfolio 2 --
+                    Category -- 
+                    Allocation -- 
+                    Large Cap Stocks 
+                    50% --
+                    Bonds 
+                    50%
+             </p>
+             <p>Hit the "TEST" button, and the example users targeted investment profile will display below along with the best funds for each investment category</p>
+             <div class="panel-body">
+              
+              <p id="retirement"></p>
+              <p id="lgCap"></p>
+              <p id="midCap"></p>
+              <p id="smCap"></p>
+              <p id="intl"></p>
+              <p id="rE"></p>
+              <p id="bonds"></p>
+              <p id="mM"></p>
+              <p id="commoditities"></p>
+              <p id="tD"></p>
+          
+              <button type="button" id="test" class="btn btn-lg btn-default"><b>Test</b><span class="glyphicon glyphicon-"></span></button>
+             </div>
+        </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-12">
+          
+
+    <footer class="footer">
+      <div class="container">
+        <p>Control Panel</p>
+        <p><a href="/api/funds">API Link</a> | <a href="https://github.com/BBQsauce913/codeSample">GitHub Repo</a></p>
+      </div>
+    </footer>
+
+  </div>
+
+</body>
+
+<script type="text/javascript">
+
+  function retire(retirement) {
+
+    retirement = 50000;
+    
+        lgCap = 0.38;
+        midCap = 0.12;
+        smCap = 0.08;
+        intl = 0.26;
+        realEstate = 0.04;
+        bonds = 0.10;
+        moneyMarket = 0.02;
+        commodities = 0;
+        targetDate = 0;
+
+        function lgCapSort() {
+            var lgCapInvest = retirement * lgCap;
+            console.log("Targeted Large Cap Stock Investment: $" + lgCapInvest)
+            document.getElementById("lgCap").innerHTML = "Large Cap Stocks $" + lgCapInvest
+        }
+
+        function midCapSort() {
+            var midCapInvest = retirement * midCap;
+            console.log("Targeted Mid Cap Stock Investment: $" + midCapInvest);
+            document.getElementById("midCap").innerHTML = "Mid Cap Stocks $" + midCapInvest 
+        }
+
+        function smCapSort() {
+            var smCapInvest = retirement * smCap;
+            console.log("Targeted Small Cap Stock Investment: $" + smCapInvest);
+            document.getElementById("smCap").innerHTML = "Small Cap Stocks $" + smCapInvest
+        }
+
+        function intlSort() {
+            var intlInvest = retirement * intl;
+            console.log("Targeted International Stock Investments: $" + intlInvest);
+            document.getElementById("intl").innerHTML = "International Stocks $" + intlInvest
+        }
+
+        function realEstateSort() {
+            var realEstateInvest = retirement * realEstate;
+            console.log("Targeted Real Estate Investments: $" + realEstateInvest);
+            document.getElementById("rE").innerHTML = "Real Estate " + realEstateInvest
+        }
+
+        function bondSort() {
+            var bondInvest = retirement * bonds;
+            console.log("Targeted Bond Investments: $" + bondInvest);
+            document.getElementById("bonds").innerHTML = "Bonds $" + bondInvest
+        }
+
+        function moneyMarketSort() {
+            var moneyMarketInvest = retirement * moneyMarket;
+            console.log("Targeted Money Market Investments: $" + moneyMarketInvest);
+            document.getElementById("mM").innerHTML = "Money Markets $" + moneyMarketInvest
+        }
+
+        function commoditieSort() {
+            var commoditieInvest = retirement * commodities;
+            document.getElementById("commoditities").innerHTML = "Commodities $" + commoditieInvest
+        }
+
+        function targetDateSort() {
+            var targetDateInvest = retirement * targetDate;
+            document.getElementById("tD").innerHTML = "Target Date Invest $" + targetDateInvest
+        }
+    
+    lgCapSort();
+    midCapSort();
+    smCapSort();
+    intlSort();
+    realEstateSort();
+    bondSort()
+    moneyMarketSort();
+    commoditieSort();
+    targetDateSort();
+}
+
+function runFundQuery() {
+
+      var currentURL = window.location.origin;
+
+      $.ajax({ url: currentURL + "/api/example", method: "GET" })
+      .done(function(targetArray) {
+
+        console.log("------------------------------------");
+        console.log("URL: " + currentURL + "/api/example");
+        console.log("------------------------------------");
+
+        console.log(targetArray);
+        console.log("------------------------------------");
+
+        for (var i = 0; i < targetArray.length; i++) {
+
+          var fundSelection = $("<div>");
+          fundSelection.addClass("well");
+          fundSelection.attr("id", "tableWell-" + i + 1);
+          $("#fundSelection").append(fundSelection);
+
+          var fundNumber = i + 1;
+
+          $("#tableWell-" + i + 1).append("<h2><span class='label label-primary'>" + fundNumber + "</span> | " 
+            + targetArray[i].fund + "</h2> | " 
+            + targetArray[i].ticker + "</h4> | "
+            + targetArray[i].category + "</h4> | "
+            + targetArray[i].expenseRatio + "</h4> |");
+        }
+      });
+}
+
+$(document).ready(function(){
+    $("#test").on("click", function(){
+      retire();
+      runFundQuery();
+
+      $("#test").css({
+        "display": "none"
+      });
+    })
+})
+
+// retire();
+
+</script>
+</html>

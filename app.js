@@ -127,7 +127,5 @@ function start(){
 };
 
 
-
-
 // Starts app
 start();

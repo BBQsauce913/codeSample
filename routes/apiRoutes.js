@@ -1,4 +1,5 @@
 var fundArray = require("../data/funds");
+var targetArray = require("../data/example");
 var lgCapArray = require("../data/largeCapFunds");
 var midCapArray = require("../data/midCapFunds");
 var smCapArray = require("../data/smallCapFunds");
@@ -11,6 +12,10 @@ module.exports = function(app) {
     app.get("/api/funds", function(req, res){
         res.json(fundArray);
     });
+
+    app.get('/api/example', function(req, res){
+        res.json(targetArray);
+    })
 
     app.get("/api/funds/lgCap", function(req, res){
         res.json(lgCapArray);
